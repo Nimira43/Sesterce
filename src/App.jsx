@@ -5,7 +5,7 @@ function App() {
     <div className='h-[100vh]'>
       <Router>
         <Routes>
-          <Route path='/' />  
+          <Route path='/' element= />  
         </Routes> 
       </Router>      
     </div>
