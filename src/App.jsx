@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { Dashboard } from '@/components'
+import { Dashboard, Navbar } from '@/components'
 
 function App() {
   return (
@@ -7,6 +7,7 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Dashboard />} />  
+          <Route path='/navbar' element={<Navbar />} />  
         </Routes> 
       </Router>      
     </div>
