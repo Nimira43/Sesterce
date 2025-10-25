@@ -79,6 +79,14 @@
   }
 
   .navbar-wrapper {
-    @apply flex items-center justify-between border-b border-grey-4 dark:border-grey-1 dark:shadow-lg mb-4 bg-light dark:bg-dark p-3 md:py-2 w-full
+    @apply flex items-center justify-between border-b border-grey-4 dark:border-grey-1 dark:shadow-lg mb-4 bg-light dark:bg-dark p-3 md:py-2 w-full;
+  }
+
+  .main-btn {
+    @apply h-fit cursor-pointer rounded-md p-2 bg-main hover:bg-main-dark;
+  }
+
+  .transition-btn {
+    @apply transition-all duration-500 ease-in-out;
   }
 }
