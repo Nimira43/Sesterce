@@ -1,7 +1,12 @@
+import { useState } from 'react'
+
+
 const Navbar = () => {
+  const [searchModal, setSearchModal] = useState(false)
+
   return (
     <div>
-      Navbar
+      
     </div>
   )
 }
