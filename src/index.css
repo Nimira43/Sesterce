@@ -73,7 +73,12 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  .navbar-wrapper {
+    @apply flex items-center justify-between border-b border-grey-4 dark:border-grey-1 dark:shadow-lg mb-4 bg-light dark:bg-dark p-3 md:py-2 w-full
   }
 }
