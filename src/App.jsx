@@ -1,11 +1,12 @@
-import { Route, Router, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Dashboard } from '@/components'
 
 function App() {
   return (
     <div className='h-[100vh]'>
       <Router>
         <Routes>
-          <Route path='/' element= />  
+          <Route path='/' element={<Dashboard />} />  
         </Routes> 
       </Router>      
     </div>
