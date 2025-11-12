@@ -18,7 +18,14 @@ const Navbar = () => {
           </button>
 
           {searchModal && (
-            <div className='flex items-start justify-start fixed md:static top-0 z-100 left-0 bg-main md:bg-main-light md:dark:bg-main-dark w-full h-[100vh] md:h-fit p-5 md:p-0'></div>
+            <div className='flex items-start justify-start fixed md:static top-0 z-100 left-0 bg-main md:bg-main-light md:dark:bg-main-dark w-full h-[100vh] md:h-fit p-5 md:p-0'>
+              <div
+               ref={modalRef}
+               className='rounded-lg bg-light dark:bg-dark md:dark:bg-dark p-5 md:p-0 w-full'
+              >
+
+              </div>
+            </div>
           )}
         </div>
       </nav>
