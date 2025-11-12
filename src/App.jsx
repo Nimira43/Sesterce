@@ -15,6 +15,3 @@ function App() {
 }
 
 export default App
-
-// import { GiAbstract056 } from 'react-icons/gi'
-// <GiAbstract056 className='text-gold text-4xl' />
