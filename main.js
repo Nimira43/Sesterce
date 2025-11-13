@@ -95,7 +95,18 @@ function checkWin(row, col) {}
 
 function connex(cells = []) {}
 
-function click() {}
+function click() {
+  if (gameOver) {
+    newGame()
+    return
+  }
+
+  if (!playersTurn) {
+    return
+  }
+
+  selectCell()
+}
 
 function createGrid() {}
 
