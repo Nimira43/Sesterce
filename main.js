@@ -111,7 +111,12 @@ function highlightCell(x, y) {}
 
 function highlightGrid(e) {}
 
-function newGame() {}
+function newGame() {
+  playersTurn = Math.random() < 0.5
+  gameOver = false
+  gameTied = false
+  createGrid()
+}
 
 function selectCell() {}
 
