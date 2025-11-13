@@ -263,6 +263,14 @@ function selectCell() {
         }
       }
     }
+
+    if (gameTied) {
+      gameOver = true
+    }
+  }
+
+  if (!gameOver) {
+    playersTurn = !playersTurn
   }
 }
 
