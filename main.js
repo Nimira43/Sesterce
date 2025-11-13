@@ -4,7 +4,8 @@ const canvasEl = document.querySelector('canvas')
 const ctx = canvasEl.getContext('2d')
 
 class Cell {
-  constructor() {}
+  constructor(){
+  }
 
   contains() {}
   draw() {}
@@ -19,3 +20,27 @@ let gameOver,
 let width,
     height,
     margin
+
+let timeDiff, timeLast
+
+
+
+
+function playGame() {}
+function checkWin() {}
+function connex() {}
+function click() {}
+function createGrid() {}
+function drawBackground() {}
+function drawGrid() {}
+function drawText() {}
+function AI() {}
+function highlightCell() {}
+function highlightGrid() {}
+function newGame() {}
+function selectCell() {}
+function setDimensions() {}
+
+
+
+
