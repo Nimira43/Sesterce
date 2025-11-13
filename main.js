@@ -47,6 +47,14 @@ class Cell {
       Math.PI * 2
     )
     canvasContext.fill()
+  
+    if (this.winner || this.highlight != null) {
+      colour = this.winner 
+        ? COLOUR_WIN
+        : this.highlight
+          ? COLOUR_RI
+          : COLOUR_AI
+    }
   }
 }
 
