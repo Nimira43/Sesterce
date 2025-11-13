@@ -4,7 +4,15 @@ const canvasEl = document.querySelector('canvas')
 const ctx = canvasEl.getContext('2d')
 
 class Cell {
-  constructor(){
+  constructor(left, top, w, h, row, col) {
+    this.left = left
+    this.right = left + w
+    this.top = top
+    this.bottom = top + h
+    this.w = w
+    this.h = h
+    this.row = row
+    this.col = col
   }
 
   contains() {}
