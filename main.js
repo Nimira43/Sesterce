@@ -37,6 +37,16 @@ class Cell {
         ? COLOUR_RI
         : COLOUR_AI
 
+    canvasContext.fillStyle = colour
+    canvasContext.beginPath()
+    canvasContext.arc(
+      this.centreX,
+      this.centreY,
+      this.r,
+      0,
+      Math.PI * 2
+    )
+    canvasContext.fill()
   }
 }
 
