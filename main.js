@@ -137,6 +137,13 @@ function drawGrid() {
     frameWidth,
     frameHeight
   )
+  ctx.fillStyle = COLOUR_FRAME_BOTTOM
+  ctx.fillRect(
+    cell.left - margin / 2,
+    cell.top + frameHeight - margin / 2,
+    frameWidth + margin,
+    margin
+  )
 }
 
 function drawText() {}
