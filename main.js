@@ -183,7 +183,15 @@ function drawText() {
       ? TEXT_RI
       : TEXT_AI
 
-  
+  if (gameTied) {
+    ctx.strokeText(text, width / 2, height / 2)
+    ctx.fillText(text, width / 2, height / 2)
+  } else {
+    ctx.strokeText(text, width / 2, height / 2 - offset)
+    ctx.fillText(text, width / 2, height / 2 - offset)
+    ctx.strokeText(TEXT_WIN, width / 2, height / 2 + offset)
+    ctx.fillText(TEXT_WIN, width / 2, height / 2 + offset)
+  }
 }
 
 function AI(diff) {}
