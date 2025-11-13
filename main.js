@@ -29,8 +29,10 @@ class Cell {
       y < this.bottom
     )
   }
-  
-  draw() {}
+
+  draw(canvasContext) {
+    
+  }
 }
 
 let gameOver,
