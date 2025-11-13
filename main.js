@@ -80,6 +80,10 @@ let width,
     height,
     margin
 
+canvasEl.addEventListener('click', click)
+canvasEl.addEventListener('mousemove', highlightGrid)
+window.addEventListener('resize', setDimensions)
+
 let timeDiff, timeLast
 
 
