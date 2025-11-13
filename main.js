@@ -31,7 +31,12 @@ class Cell {
   }
 
   draw(canvasContext) {
-    
+    let colour = this.owner == null
+      ? COLOUR_BG 
+      : this.owner
+        ? COLOUR_RI
+        : COLOUR_AI
+
   }
 }
 
