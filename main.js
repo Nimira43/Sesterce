@@ -130,6 +130,10 @@ function createGrid() {
     cell = (width - margin * 2) / GRID_COLS
     marginX = margin
     marginY = (height - cell * GRID_ROWS) / 2
+  } else {
+    cell = (height - margin * 2) / GRID_ROWS
+    marginY = margin
+    marginX = (width - cell * GRID_COLS) / 2
   }
 }
 
