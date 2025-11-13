@@ -1,4 +1,4 @@
-import { DELAY_AI, GRID_CIRCLE, GRID_COLS, GRID_ROWS, MARGIN, COLOUR_BG, COLOUR_FRAME, COLOUR_FRAME_BOTTOM,COLOUR_RI, COLOUR_RI_DARK, COLOUR_AI, COLOUR_AI_DARK, COLOUR_TIE, COLOUR_TIE_DARK, COLOUR_WIN, TEXT_RI, TEXT_AI, TEXT_TIE, TEXT_WIN } from './js/constants'
+import { DELAY_AI, GRID_CIRCLE, GRID_COLS, GRID_ROWS, MARGIN, COLOUR_BG, COLOUR_FRAME, COLOUR_FRAME_BOTTOM,COLOUR_RI, COLOUR_RI_DARK, COLOUR_AI, COLOUR_AI_DARK, COLOUR_TIE, COLOUR_TIE_DARK, COLOUR_WIN, TEXT_RI, TEXT_AI, TEXT_TIE, TEXT_WIN } from './js/constants.js'
 
 const canvasEl = document.querySelector('canvas')
 const ctx = canvasEl.getContext('2d')
@@ -86,7 +86,7 @@ canvasEl.addEventListener('mousemove', highlightGrid)
 window.addEventListener('resize', setDimensions)
 
 let timeDiff, timeLast
-requestionAnimtionFrame(playGame)
+requestAnimationFrame(playGame)
 
 function playGame(timeNow) {
   if (!timeLast) {
@@ -134,6 +134,15 @@ function createGrid() {
     cell = (height - margin * 2) / GRID_ROWS
     marginY = margin
     marginX = (width - cell * GRID_COLS) / 2
+  }
+
+  for (let i = 0; i < GRID_ROWS; i++) {
+    grid[i] = []
+    for(let j = 0; j < GRID_COLS; j++) {
+      let left =  marginX + j * cell 
+      let top =  marginY + i * cell
+      grid[i][j] = new Cell(left, top, cell, cell, i, j) 
+    }
   }
 }
 
