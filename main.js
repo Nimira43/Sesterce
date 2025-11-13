@@ -79,29 +79,42 @@ let gameOver,
 let width,
     height,
     margin
+setDimensions()
 
 canvasEl.addEventListener('click', click)
 canvasEl.addEventListener('mousemove', highlightGrid)
 window.addEventListener('resize', setDimensions)
 
 let timeDiff, timeLast
+requestionAnimtionFrame(playGame)
 
 
+function playGame(timeNow) {}
 
+function checkWin(row, col) {}
 
-function playGame() {}
-function checkWin() {}
-function connex() {}
+function connex(cells = []) {}
+
 function click() {}
+
 function createGrid() {}
+
 function drawBackground() {}
+
 function drawGrid() {}
+
 function drawText() {}
-function AI() {}
-function highlightCell() {}
-function highlightGrid() {}
+
+function AI(diff) {}
+
+function highlightCell(x, y) {}
+
+function highlightGrid(e) {}
+
 function newGame() {}
+
 function selectCell() {}
+
 function setDimensions() {}
 
 
