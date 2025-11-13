@@ -253,7 +253,17 @@ function selectCell() {
     return
   }
 
-  
+  if (!gameOver) {
+    gameTied = true
+    OUTER: for (let row of grid) {
+      for (let cell of row) {
+        if (cell.owner == null) {
+          gameTied = false
+          break OUTER
+        }
+      }
+    }
+  }
 }
 
 function setDimensions() {
