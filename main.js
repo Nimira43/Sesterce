@@ -168,7 +168,22 @@ function drawText() {
   ctx.font = size + 'px sans-serif'
   ctx.lineJoin = 'round'
   ctx.lineWidth = size / 10
+  ctx.fillStyle  = gameTied
+    ? COLOUR_TIE_DARK
+    : playersTurn
+    ? COLOUR_RI_DARK
+    : COLOUR_AI_DARK
+  ctx.textAlign = 'center'
+  ctx.textBaseline = 'middle'
 
+  let offset = size * 0.6
+  let text = gameTied
+    ? TEXT_TIE
+    : playersTurn
+      ? TEXT_RI
+      : TEXT_AI
+
+  
 }
 
 function AI(diff) {}
