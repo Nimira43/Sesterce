@@ -115,7 +115,15 @@ function newGame() {}
 
 function selectCell() {}
 
-function setDimensions() {}
+function setDimensions() {
+  width = window.innerWidth
+  height = window.innerHeight
+  canvasEl.width = width
+  canvasEl.height = height
+  margin = MARGIN * Math.min(height, width)
+
+  newGame()
+}
 
 
 
