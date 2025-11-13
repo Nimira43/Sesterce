@@ -232,7 +232,23 @@ function newGame() {
   createGrid()
 }
 
-function selectCell() {}
+function selectCell() {
+  let highlighting = false
+  OUTER: for (let row of grid) {
+    for (let cell of row) {
+      if (cell.highlight != null) {
+        highlighting = true
+        cell.highlight = null
+        cell.owner = playersTurn
+
+        if (checkWin(cell.row, cell.col)) {
+          gameOver = true
+        }
+        break OUTER
+      }
+    }
+  }
+}
 
 function setDimensions() {
   width = window.innerWidth
