@@ -248,6 +248,12 @@ function selectCell() {
       }
     }
   }
+
+  if (!highlighting) {
+    return
+  }
+
+  
 }
 
 function setDimensions() {
