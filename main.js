@@ -154,7 +154,22 @@ function drawGrid() {
   }
 }
 
-function drawText() {}
+function drawText() {
+  if (!gameOver) {
+    return
+  }
+
+  let size = grid[0][0].h
+  ctx.fillStyle  = gameTied
+    ? COLOUR_TIE
+    : playersTurn
+    ? COLOUR_RI
+    : COLOUR_AI
+  ctx.font = size + 'px sans-serif'
+  ctx.lineJoin = 'round'
+  ctx.lineWidth = size / 10
+
+}
 
 function AI(diff) {}
 
