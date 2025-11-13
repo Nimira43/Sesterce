@@ -119,7 +119,19 @@ function click() {
   selectCell()
 }
 
-function createGrid() {}
+function createGrid() {
+  grid = []
+  let cell, marginX, marginY
+
+  if (
+    ((width - margin * 2) * GRID_ROWS) /
+    GRID_COLS < height - margin * 2
+  ) {
+    cell = (width - margin * 2) / GRID_COLS
+    marginX = margin
+    marginY = (height - cell * GRID_ROWS) / 2
+  }
+}
 
 function drawBackground() {
   ctx.fillStyle = COLOUR_BG
