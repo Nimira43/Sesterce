@@ -13,6 +13,12 @@ class Cell {
     this.h = h
     this.row = row
     this.col = col
+    this.centreX = left + w / 2
+    this.centreY = top + h / 2
+    this.r = (w * GRID_CIRCLE) / 2
+    this.highlight = null
+    this.owner = null
+    this.winner = false
   }
 
   contains() {}
