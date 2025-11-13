@@ -3,4 +3,19 @@ import { DELAY_AI, GRID_CIRCLE, GRID_COLS, GRID_ROWS, MARGIN, COLOUR_BG, COLOUR_
 const canvasEl = document.querySelector('canvas')
 const ctx = canvasEl.getContext('2d')
 
+class Cell {
+  constructor() {}
 
+  contains() {}
+  draw() {}
+}
+
+let gameOver,
+    gameTied,
+    grid = [],
+    playersTurn,
+    timeAI
+
+let width,
+    height,
+    margin
