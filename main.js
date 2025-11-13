@@ -126,7 +126,18 @@ function drawBackground() {
   ctx.fillRect(0, 0, width, height)
 }
 
-function drawGrid() {}
+function drawGrid() {
+  let cell = grid[0][0]
+  let frameHeight = cell.h * GRID_ROWS
+  let frameWidth = cell.w * GRID_COLS
+  ctx.fillStyle = COLOUR_FRAME
+  ctx.fillRect(
+    cell.left,
+    cell.top,
+    frameWidth,
+    frameHeight
+  )
+}
 
 function drawText() {}
 
