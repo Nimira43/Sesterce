@@ -88,8 +88,19 @@ window.addEventListener('resize', setDimensions)
 let timeDiff, timeLast
 requestionAnimtionFrame(playGame)
 
+function playGame(timeNow) {
+  if (!timeLast) {
+    timeLast = timeNow
+  }
 
-function playGame(timeNow) {}
+  timeDiff = (timeNow - timeLast) / 1000
+  timeLast = timeNow
+  AI(timeDiff)
+  drawBackground()
+  drawGrid()
+  drawText()
+  requestAnimationFrame(playGame)
+}
 
 function checkWin(row, col) {}
 
