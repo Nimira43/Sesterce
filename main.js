@@ -144,6 +144,14 @@ function drawGrid() {
     frameWidth + margin,
     margin
   )
+
+  ctx.fill()
+
+  for(let row of grid) {
+    for (let cell of row) {
+      cell.draw(ctx)
+    }
+  }
 }
 
 function drawText() {}
