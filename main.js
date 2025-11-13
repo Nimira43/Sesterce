@@ -121,7 +121,10 @@ function click() {
 
 function createGrid() {}
 
-function drawBackground() {}
+function drawBackground() {
+  ctx.fillStyle = COLOUR_BG
+  ctx.fillRect(0, 0, width, height)
+}
 
 function drawGrid() {}
 
