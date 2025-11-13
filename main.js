@@ -54,6 +54,18 @@ class Cell {
         : this.highlight
           ? COLOUR_RI
           : COLOUR_AI
+      
+      canvasContext.lineWidth = this.r / 4
+      canvasContext.strokeStyle = colour
+      canvasContext.beginPath()
+      canvasContext.arc(
+        this.centreX,
+        this.centreY,
+        this.r,
+        0,
+        Math.PI * 2  
+      )
+      canvasContext.stroke()
     }
   }
 }
